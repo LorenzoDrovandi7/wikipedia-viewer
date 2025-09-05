@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(-45deg, #1e1e1e, #232526, #3a3a3a, #1e1e1e);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffcc00, #ff8800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(6px);
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px #ffcc00;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ffcc00, #ff8800);
+  color: #1e1e1e;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.4);
+}
+
+.results {
+  width: 90%;
+  max-width: 900px;
+  display: grid;
+  gap: 20px;
+}
+
+.result {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.25s, box-shadow 0.3s;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
+}
+
+.result a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffcc00;
+  transition: color 0.3s;
+}
+
+.result a:hover {
+  color: #ff8800;
+}
+
+.result p {
+  margin-top: 10px;
+  color: #ddd;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
